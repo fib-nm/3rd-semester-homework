@@ -101,4 +101,5 @@ TEST_CASE("01") {
 	for (u64 i = 0; i < 99; ++i) {
 		REQUIRE(v.data[i] <= v.data[i + 1]);
 	}
+	destroyvector(&v);
 }
