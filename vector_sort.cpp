@@ -97,16 +97,6 @@ TEST_CASE("01") {
 	for (u64 i = 0; i < 100; ++i) {
 		v.pushback(std::rand() % 100);
 	}
-	for (u64 i = 0; i < 99; ++i) {
-		REQUIRE(v.data[i] <= v.data[i + 1]);
-	}
-}
-
-TEST_CASE("02") {
-	vector v = makevector();
-	for (u64 i = 0; i < 100; ++i) {
-		v.pushback(std::rand() % 100);
-	}
 	mergesort(&v);
 	for (u64 i = 0; i < 99; ++i) {
 		REQUIRE(v.data[i] <= v.data[i + 1]);
