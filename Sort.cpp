@@ -11,8 +11,6 @@ template <class TRAI,
     >
 >
 void MergeSort(TRAI _begin, TRAI _end, TCompare cmp = {}) {
-    // end - это элемент после последнего
-    // real_end - это последний элемент
     auto real_end = _end - 1;
     size_t length = 1;
     auto i = _begin;
